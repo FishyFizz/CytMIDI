@@ -1,0 +1,7 @@
+﻿  Main.cpp
+D:\TMP\CytMIDI\CytMIDI\Source\Util.h(80,38): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+D:\TMP\CytMIDI\CytMIDI\Source\Main.cpp(209,67): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\TMP\CytMIDI\CytMIDI\Source\Main.cpp(235,82): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\TMP\CytMIDI\CytMIDI\Source\Main.cpp(236,67): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\TMP\CytMIDI\CytMIDI\Source\Main.cpp(179): warning C4701: 使用了可能未初始化的局部变量“CurrentSecondsPerBeat”
+  CytMIDI_ConsoleApp.vcxproj -> D:\TMP\CytMIDI\CytMIDI\Builds\VisualStudio2019\x64\Debug\ConsoleApp\CytMIDI.exe

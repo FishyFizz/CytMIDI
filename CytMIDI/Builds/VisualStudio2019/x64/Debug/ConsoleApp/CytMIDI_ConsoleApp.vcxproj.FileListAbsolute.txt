@@ -1,0 +1,2 @@
+D:\TMP\CytMIDI\CytMIDI\Builds\VisualStudio2019\x64\Debug\ConsoleApp\CytMIDI.exe
+D:\TMP\CytMIDI\CytMIDI\Builds\VisualStudio2019\x64\Debug\ConsoleApp\CytMIDI.pdb
