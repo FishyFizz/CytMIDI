@@ -1,9 +1,69 @@
 ### 个人弄着玩的项目，有bug欢迎反馈
+### Personally made this for fun. Bug reports and feedbacks are welcome.
 
 # CytMIDI
+
+A simple program used to convert MIDI file into Cytoid chart.
+
+## Build Requirmets
+
+Juce Framework
+
+Visual Studio 2019
+
+## Using CytMIDI:
+
+### 1.Import your music track into music production software such as FL Studio / Cubase.
+
+### 2.Create a new track and input MIDI notes. Rules are below:
+
+####       a.A note that's longer than half of a beat AND is longer than 0.2s will be a HOLD note.
+    
+        a1.If the note holds till next time the scan line bounces back, the note will be a LONG HOLD (yelow one with a effect).
+        
+        a2.If the note ends before next time the scan line bounces back, the note will be a SHORT HOLD.
+        
+####      b.A note that's not on the default MIDI channel (= notes on channel 2~16) are CHAIN note.
+    
+        b1.Each channel of 2~16 represents a distinct chain.
+        
+        b2.When a first note on channel 2~16 is detected, the note is CHAIN HEAD.
+        
+        b3.A chain MUST HAVE a note in that specific channel with velocity 127(max) to indicate it's END.
+        
+        b4.If the note is not the first note detected, and it's not a CHAIN END, it's a CHAIN BODY note.
+        
+####      c.If a note doesn't fall in the categories above:
+    
+        c1.It's a TAP note if the velocity is below 120.
+        
+        c2.It's a FLICK note if the velocity is above or equal to 120.
+        
+####      d.The position of the note appearing in the chart is determined by the MIDI PITCH.
+    
+        d1.CytMIDI detects the LOWEST and HIGHEST pitch in the MIDI file.
+        
+        d2.The lowest and highest note will appear at the leftmost and rightmost position.
+        
+        d3.Notes between them will spread evenly according to their MIDI pitch.
+        
+### 3.Export MIDI file and drag-drop onto the program.
+
+### 4.CytMIDI will ask for the beat number of a single page. A bigger number will resulting a slow scan line, and a crowdy chart. This is usually set to 1/2/4.
+
+### 5.You should see CytMIDI showing the MIDI signal it read, and cytoid notes it translated.
+
+### 6.Chart.json will be created in the working directory of the program.
+
+### 7.import the chart into a editor and fine tune.
+
+
+# CytMIDI
+
 用于将MIDI文件直接转换为Cytoid谱面的程序
 
 ## 编译条件
+
 Juce Framework
 
 Visual Studio 2019
